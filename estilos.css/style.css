@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --cor-fundo-body: #191919;
+    --cor-letra-padrao: #ffffff;
+    --cor-letra-cinza: #464646;
+    --cor-laranja-enfase: #D87C49;
+    --cor-bg-produtos: #fafafa;
+    --cor-bg-card: #f1f1f1;
+
+}
+body{
+    background-color: var(--cor-fundo-body);
+    color: var(--cor-letra-padrao);
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+}

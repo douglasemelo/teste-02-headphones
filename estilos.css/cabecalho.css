@@ -1,0 +1,118 @@
+.cabecalho__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    border-bottom: 1px solid var(--cor-letra-cinza);
+    
+}
+
+.cabecalho__container a{
+    color: var(--cor-letra-padrao);
+    
+}
+
+.logo{
+    font-size: 1.8rem;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+}
+
+
+.cabecalho__navegador ul{
+    display: flex;
+    
+}
+
+.cabecalho__link{
+    padding: 40px 20px;
+    color: var(--cor-letra-cinza);
+}
+.cabecalho__link:hover{
+    color: var(--cor-laranja-enfase);
+    font-weight: 500;
+    text-decoration: underline #ffffff;
+    
+}
+.cabecalho__icone-carrinho:hover{
+   src: url(/imagens/icone-carrinho-de-compras-branco.png);
+}
+
+
+/* INICIO MENU HAMBURGUER */
+
+.mobile-menu{
+    cursor: pointer;
+    display: none;
+    
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 8px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+@media (max-width: 1200px){
+
+    .nav-list{
+        position: absolute;
+        top: 10%;
+        right: 0;
+        width: 50vw;
+        height: calc(100vh - 10%);
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        
+    }
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+        margin-top: 60px;
+    }
+    .mobile-menu{
+        display: block;
+        margin: 0 auto;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list.active{
+        transform: translateX(0);
+        transition: transform 0.3s ease-in;
+    }
+    
+    @keyframes navLinkFade {
+        
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }   
+    }
+
+    .mobile-menu.active .line1{
+        transform: rotate(-45deg) translate(-8px, 8px);
+
+    }
+    .mobile-menu.active .line2{
+        opacity: 0;
+    }
+    .mobile-menu.active .line3{
+        transform: rotate(45deg) translate(-7px, -8px);
+    }
+    .logo span{
+        display: none;
+        
+    }
+
+}
